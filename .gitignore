@@ -1,1 +1,5 @@
 data/
+.venv/
+results/ckpt/
+*.pt
+__pycache__/
