@@ -1,5 +1,17 @@
-data/
+# Environnement
 .venv/
-results/ckpt/
-*.pt
 __pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# Données lourdes (on garde data/splits.csv et data/ood.csv dans Git)
+data/raw/
+data/cache/
+data/phash8_*.npy
+data/ood/plantvillage_autres/
+
+# Poids des modèles et fichiers lourds
+*.pt
+results/ckpt/
+results/onnx/
+results/runs/*/grad_norms.csv
