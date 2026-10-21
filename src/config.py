@@ -1,4 +1,4 @@
-"""Configuration centrale de DiagnoCulture : chemins, graine, choix figés du projet.
+"""Configuration centrale de DiagnoCulture : chemins, seed, choix figés du projet.
 
 Tous les notebooks importent ce module. Rien n'est gardé en mémoire d'un notebook
 à l'autre : tout passe par des fichiers dans data/ et results/.
@@ -67,7 +67,7 @@ for _d in (DATA_DIR, OOD_DIR, RAW_DIR, CACHE_DIR, RESULTS, FIG_DIR, RUNS_DIR, CK
     _d.mkdir(parents=True, exist_ok=True)
 
 # --------------------------------------------------------------------------
-# Choix figés du projet (décision d'équipe du lundi 19 octobre)
+# Choix figés du projet
 # --------------------------------------------------------------------------
 SEED = 42
 KAGGLE_DATASET = "abdallahalidev/plantvillage-dataset"   # PlantVillage original (Mohanty et al.), dossier color/
@@ -105,7 +105,7 @@ def set_seed(seed: int = SEED) -> None:
 
 
 def seed_worker(worker_id: int) -> None:
-    """Graine propre à chaque worker du DataLoader (reproductibilité)."""
+    """Seed propre à chaque worker du DataLoader (reproductibilité)."""
     s = torch.initial_seed() % 2**32
     np.random.seed(s)
     random.seed(s)
