@@ -1,0 +1,7 @@
+experiment,partie,modele,hyperparametres,temps_entrainement_s,val_f1,resolution,params,taille_mo,test_acc,test_f1_macro,run
+P1_CNN-Res_lr=0.1,1,CNN-Res,"Adam lr=0.1, batch 64, 10 époques",224.6,0.7465,,,,,,
+P1_CNN-Res_lr=0.01,1,CNN-Res,"Adam lr=0.01, batch 64, 10 époques",232.6,0.9191,,,,,,
+P1_CNN-Res_lr=0.001,1,CNN-Res,"Adam lr=0.001, batch 64, 10 époques",207.1,0.9662,,,,,,
+P1_CNN-Res_lr=0.0001,1,CNN-Res,"Adam lr=0.0001, batch 64, 10 époques",221.7,0.9524,,,,,,
+P1_CNN-Plain,1,CNN-Plain,"Adam lr=0.001, batch 64, 15 époques",231.9,0.9705,128.0,1336458.0,5.36,0.9703,0.9612,cnn_plain
+P1_CNN-Res,1,CNN-Res,"Adam lr=0.001, batch 64, 15 époques",359.3,0.9738,128.0,1190922.0,4.79,0.9717,0.966,cnn_res
