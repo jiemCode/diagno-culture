@@ -1,0 +1,6 @@
+{
+  "run": "mobilenet_v3_large_last_third",
+  "arch": "mobilenet_v3_large",
+  "strategy": "last_third",
+  "size": 224
+}
