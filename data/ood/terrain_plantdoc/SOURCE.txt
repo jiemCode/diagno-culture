@@ -1,0 +1,4 @@
+Images de feuilles de tomate prises sur le terrain, issues du jeu PlantDoc (dossier test).
+Singh D., Jain N., Jain P., Kayal P., Kumawat S., Batra N. (2020). PlantDoc: A Dataset for Visual Plant Disease Detection. CoDS-COMAD 2020.
+https://github.com/pratikkayal/PlantDoc-Dataset - Licence Creative Commons Attribution 4.0 (CC BY 4.0).
+Modifications : redimensionnement (800 px max), conversion JPEG, retrait de 7 images qui n'etaient pas des photos (diapositives, montages avec texte).
