@@ -16,3 +16,8 @@ P4_AE sain (seuil partie 3),4,AE sain (seuil partie 3),seuil 0.01405,,,,,,,,,,,,
 P4_AE connus,4,AE connus,seuil 0.0144,,,,,,,,,,,,0.4245,,,0.0,0.0551,0.9937
 P4_Hybride OU,4,Hybride OU,seuil 0.9748,,,,,,,,,,,,0.914,,,0.6,0.0494,0.9988
 P4_Hybride score combiné,4,Hybride score combiné,seuil 0.1805,,,,,,,,,,,,0.9519,,,0.7455,0.0536,1.0
+P5_VAE : erreur de reconstruction,5,VAE k=16,"Adam lr=0.001, batch 64, 40 époques, β de 0 à 1 en 10 époques, saines seulement",10.4,,64.0,733155.0,2.95,,,,,,,0.6097,0.1581,0.0795,,,
+P5_VAE : -ELBO,5,VAE k=16,"Adam lr=0.001, batch 64, 40 époques, β de 0 à 1 en 10 époques, saines seulement",10.4,,64.0,733155.0,2.95,,,,,,,0.6276,0.1762,0.0795,,,
+Bonus_ONNX_float32,bonus,"MobileNetV3 sans M, ONNX float32",,,,224.0,,16.85,0.9933,,,,7.47,,,,,,,
+Bonus_ONNX_int8 dynamique,bonus,"MobileNetV3 sans M, ONNX int8 dynamique",,,,224.0,,13.15,0.9933,,,,5.46,,,,,,,
+Bonus_ONNX_int8 statique,bonus,"MobileNetV3 sans M, ONNX int8 statique",,,,224.0,,4.73,0.8816,,,,5.29,,,,,,,
