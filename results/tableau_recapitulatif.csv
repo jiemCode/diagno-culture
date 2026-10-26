@@ -1,0 +1,11 @@
+partie,experiment,modele,resolution,hyperparametres,params,taille_mo,temps_entrainement_s,latence_cpu_ms,latence_gpu_ms,val_f1,test_acc,test_f1_macro
+1,P1_CNN-Res_lr=0.1,CNN-Res,,"Adam lr=0.1, batch 64, 10 époques",,,224.6,,,0.7465,,
+1,P1_CNN-Res_lr=0.01,CNN-Res,,"Adam lr=0.01, batch 64, 10 époques",,,232.6,,,0.9191,,
+1,P1_CNN-Res_lr=0.001,CNN-Res,,"Adam lr=0.001, batch 64, 10 époques",,,207.1,,,0.9662,,
+1,P1_CNN-Res_lr=0.0001,CNN-Res,,"Adam lr=0.0001, batch 64, 10 époques",,,221.7,,,0.9524,,
+1,P1_CNN-Plain,CNN-Plain,128.0,"Adam lr=0.001, batch 64, 15 époques",1336458.0,5.36,231.9,22.05,2.119,0.9705,0.9703,0.9612
+1,P1_CNN-Res,CNN-Res,128.0,"Adam lr=0.001, batch 64, 15 époques",1190922.0,4.79,359.3,62.41,0.886,0.9738,0.9717,0.966
+2,P2_mobilenet_v3_large_frozen,mobilenet_v3_large,224.0,"frozen, lr tête 0.001, lr backbone None, 5 époques",4214842.0,17.07,102.7,13.44,5.208,0.9537,0.9567,0.9479
+2,P2_mobilenet_v3_large_last_third,mobilenet_v3_large,224.0,"last_third, lr tête 0.001, lr backbone 0.0001, 5 époques",4214842.0,17.07,90.7,13.44,5.208,0.9916,0.996,0.9955
+2,P2_mobilenet_v3_large_full,mobilenet_v3_large,224.0,"full, lr tête 0.001, lr backbone 1e-05, 5 époques",4214842.0,17.07,115.7,13.44,5.208,0.9721,0.982,0.9778
+2,P2_resnet50_last_third,resnet50,224.0,"last_third, lr tête 0.001, lr backbone 0.0001, 5 époques",23528522.0,94.44,122.8,111.36,6.625,0.9904,0.9927,0.9913
