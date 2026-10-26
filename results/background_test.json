@@ -1,0 +1,22 @@
+{
+  "original": {
+    "accuracy": 0.996,
+    "F1 macro": 0.9955,
+    "baisse du F1 (points)": 0.0
+  },
+  "black": {
+    "accuracy": 0.3266,
+    "F1 macro": 0.292,
+    "baisse du F1 (points)": 70.3
+  },
+  "noise": {
+    "accuracy": 0.3417,
+    "F1 macro": 0.288,
+    "baisse du F1 (points)": 70.8
+  },
+  "soil": {
+    "accuracy": 0.4848,
+    "F1 macro": 0.321,
+    "baisse du F1 (points)": 67.5
+  }
+}

@@ -15,3 +15,4 @@ data/ood/plantvillage_autres/
 results/ckpt/
 results/onnx/
 results/runs/*/grad_norms.csv
+results/essai_cnn_plain_sans_bn/ckpt/
