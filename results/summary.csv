@@ -1,11 +1,13 @@
-experiment,partie,modele,hyperparametres,temps_entrainement_s,val_f1,resolution,params,taille_mo,test_acc,test_f1_macro,run,params_entraines,latence_cpu_ms,latence_gpu_ms
-P1_CNN-Res_lr=0.1,1,CNN-Res,"Adam lr=0.1, batch 64, 10 époques",224.6,0.7465,,,,,,,,,
-P1_CNN-Res_lr=0.01,1,CNN-Res,"Adam lr=0.01, batch 64, 10 époques",232.6,0.9191,,,,,,,,,
-P1_CNN-Res_lr=0.001,1,CNN-Res,"Adam lr=0.001, batch 64, 10 époques",207.1,0.9662,,,,,,,,,
-P1_CNN-Res_lr=0.0001,1,CNN-Res,"Adam lr=0.0001, batch 64, 10 époques",221.7,0.9524,,,,,,,,,
-P1_CNN-Plain,1,CNN-Plain,"Adam lr=0.001, batch 64, 15 époques",231.9,0.9705,128.0,1336458.0,5.36,0.9703,0.9612,cnn_plain,,22.05,2.119
-P1_CNN-Res,1,CNN-Res,"Adam lr=0.001, batch 64, 15 époques",359.3,0.9738,128.0,1190922.0,4.79,0.9717,0.966,cnn_res,,62.41,0.886
-P2_mobilenet_v3_large_frozen,2,mobilenet_v3_large,"frozen, lr tête 0.001, lr backbone None, 5 époques",102.7,0.9537,224.0,4214842.0,17.07,0.9567,0.9479,mobilenet_v3_large_frozen,1242890.0,13.44,5.208
-P2_mobilenet_v3_large_last_third,2,mobilenet_v3_large,"last_third, lr tête 0.001, lr backbone 0.0001, 5 époques",90.7,0.9916,224.0,4214842.0,17.07,0.996,0.9955,mobilenet_v3_large_last_third,4022898.0,13.44,5.208
-P2_mobilenet_v3_large_full,2,mobilenet_v3_large,"full, lr tête 0.001, lr backbone 1e-05, 5 époques",115.7,0.9721,224.0,4214842.0,17.07,0.982,0.9778,mobilenet_v3_large_full,4214842.0,13.44,5.208
-P2_resnet50_last_third,2,resnet50,"last_third, lr tête 0.001, lr backbone 0.0001, 5 époques",122.8,0.9904,224.0,23528522.0,94.44,0.9927,0.9913,resnet50_last_third,22083594.0,111.36,6.625
+experiment,partie,modele,hyperparametres,temps_entrainement_s,val_f1,resolution,params,taille_mo,test_acc,test_f1_macro,run,params_entraines,latence_cpu_ms,latence_gpu_ms,model,part,k,size_mb,train_time_s,mse_healthy_val,auroc_test,recall_diseases_test,false_alarm_test
+P1_CNN-Res_lr=0.1,1.0,CNN-Res,"Adam lr=0.1, batch 64, 10 époques",224.6,0.7465,,,,,,,,,,,,,,,,,,
+P1_CNN-Res_lr=0.01,1.0,CNN-Res,"Adam lr=0.01, batch 64, 10 époques",232.6,0.9191,,,,,,,,,,,,,,,,,,
+P1_CNN-Res_lr=0.001,1.0,CNN-Res,"Adam lr=0.001, batch 64, 10 époques",207.1,0.9662,,,,,,,,,,,,,,,,,,
+P1_CNN-Res_lr=0.0001,1.0,CNN-Res,"Adam lr=0.0001, batch 64, 10 époques",221.7,0.9524,,,,,,,,,,,,,,,,,,
+P1_CNN-Plain,1.0,CNN-Plain,"Adam lr=0.001, batch 64, 15 époques",231.9,0.9705,128.0,1336458.0,5.36,0.9703,0.9612,cnn_plain,,22.05,2.119,,,,,,,,,
+P1_CNN-Res,1.0,CNN-Res,"Adam lr=0.001, batch 64, 15 époques",359.3,0.9738,128.0,1190922.0,4.79,0.9717,0.966,cnn_res,,62.41,0.886,,,,,,,,,
+P2_mobilenet_v3_large_frozen,2.0,mobilenet_v3_large,"frozen, lr tête 0.001, lr backbone None, 5 époques",102.7,0.9537,224.0,4214842.0,17.07,0.9567,0.9479,mobilenet_v3_large_frozen,1242890.0,13.44,5.208,,,,,,,,,
+P2_mobilenet_v3_large_last_third,2.0,mobilenet_v3_large,"last_third, lr tête 0.001, lr backbone 0.0001, 5 époques",90.7,0.9916,224.0,4214842.0,17.07,0.996,0.9955,mobilenet_v3_large_last_third,4022898.0,13.44,5.208,,,,,,,,,
+P2_mobilenet_v3_large_full,2.0,mobilenet_v3_large,"full, lr tête 0.001, lr backbone 1e-05, 5 époques",115.7,0.9721,224.0,4214842.0,17.07,0.982,0.9778,mobilenet_v3_large_full,4214842.0,13.44,5.208,,,,,,,,,
+P2_resnet50_last_third,2.0,resnet50,"last_third, lr tête 0.001, lr backbone 0.0001, 5 époques",122.8,0.9904,224.0,23528522.0,94.44,0.9927,0.9913,resnet50_last_third,22083594.0,111.36,6.625,,,,,,,,,
+,,,,,,,602067.0,,,,,,,,ae_k16,3.0,16.0,2.41,21.9,0.0070693306624889,0.6276807023095022,0.2011263073209976,0.0836820083682008
+,,,,,,,602067.0,,,,,,,,dae_k16,3.0,16.0,2.41,22.0,0.0073490655049681,0.6253504983556453,0.1938857602574416,0.0794979079497908
