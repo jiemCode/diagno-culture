@@ -1,0 +1,47 @@
+{
+  "classes": [
+    "Tomato___Bacterial_spot",
+    "Tomato___Early_blight",
+    "Tomato___Late_blight",
+    "Tomato___Leaf_Mold",
+    "Tomato___Septoria_leaf_spot",
+    "Tomato___Spider_mites Two-spotted_spider_mite",
+    "Tomato___Target_Spot",
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+    "Tomato___healthy"
+  ],
+  "clf_ckpt": "clf_sans_M.pt",
+  "ae_ckpt": "ae_connus.pt",
+  "ae_k": 16,
+  "clf_size": 224,
+  "ae_size": 64,
+  "norm": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "default_rule": "or",
+  "or": {
+    "msp_min": 0.9301358781950798,
+    "err_max": 0.016960259681214843
+  },
+  "score": {
+    "alpha": 1.0,
+    "z_msp": [
+      0.007642882820620186,
+      0.044593691697690195
+    ],
+    "z_err": [
+      0.0068317881442969625,
+      0.0041965024217531606
+    ],
+    "tau": 0.1804654976455121
+  }
+}
