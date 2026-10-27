@@ -16,3 +16,4 @@ P4_AE sain (seuil partie 3),4,AE sain (seuil partie 3),seuil 0.01405,,,,,,,,,,,,
 P4_AE connus,4,AE connus,seuil 0.0144,,,,,,,,,,,,0.4245,,,0.0,0.0551,0.9937
 P4_Hybride OU,4,Hybride OU,seuil 0.9748,,,,,,,,,,,,0.914,,,0.6,0.0494,0.9988
 P4_Hybride score combiné,4,Hybride score combiné,seuil 0.1805,,,,,,,,,,,,0.9519,,,0.7455,0.0536,1.0
+P5_VAE_k32,5,VAE,"k = 32, β = 0.1, score kl, Adam lr=0.001, batch 64, 40 époques",20.0,,64.0,1054051.0,4.22,,,,,,,0.8005,0.397,0.0837,,,
