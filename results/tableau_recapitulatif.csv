@@ -1,0 +1,20 @@
+partie,experiment,modele,resolution,hyperparametres,params,taille_mo,temps_entrainement_s,latence_cpu_ms,latence_gpu_ms,val_f1,test_acc,test_f1_macro,test_auroc,test_rappel_anomalies,test_fausses_alarmes,test_rejet_M,test_rejet_a_tort,test_acc_acceptes
+1,P1_CNN-Res_lr=0.1,CNN-Res,,"Adam lr=0.1, batch 64, 10 époques",,,224.6,,,0.7465,,,,,,,,
+1,P1_CNN-Res_lr=0.01,CNN-Res,,"Adam lr=0.01, batch 64, 10 époques",,,232.6,,,0.9191,,,,,,,,
+1,P1_CNN-Res_lr=0.001,CNN-Res,,"Adam lr=0.001, batch 64, 10 époques",,,207.1,,,0.9662,,,,,,,,
+1,P1_CNN-Res_lr=0.0001,CNN-Res,,"Adam lr=0.0001, batch 64, 10 époques",,,221.7,,,0.9524,,,,,,,,
+1,P1_CNN-Plain,CNN-Plain,128.0,"Adam lr=0.001, batch 64, 15 époques",1336458.0,5.36,231.9,22.05,2.119,0.9705,0.9703,0.9612,,,,,,
+1,P1_CNN-Res,CNN-Res,128.0,"Adam lr=0.001, batch 64, 15 époques",1190922.0,4.79,359.3,62.41,0.886,0.9738,0.9717,0.966,,,,,,
+2,P2_mobilenet_v3_large_frozen,mobilenet_v3_large,224.0,"frozen, lr tête 0.001, lr backbone None, 5 époques",4214842.0,17.07,102.7,13.44,5.208,0.9537,0.9567,0.9479,,,,,,
+2,P2_mobilenet_v3_large_last_third,mobilenet_v3_large,224.0,"last_third, lr tête 0.001, lr backbone 0.0001, 5 époques",4214842.0,17.07,90.7,13.44,5.208,0.9916,0.996,0.9955,,,,,,
+2,P2_mobilenet_v3_large_full,mobilenet_v3_large,224.0,"full, lr tête 0.001, lr backbone 1e-05, 5 époques",4214842.0,17.07,115.7,13.44,5.208,0.9721,0.982,0.9778,,,,,,
+2,P2_resnet50_last_third,resnet50,224.0,"last_third, lr tête 0.001, lr backbone 0.0001, 5 époques",23528522.0,94.44,122.8,111.36,6.625,0.9904,0.9927,0.9913,,,,,,
+3,P3_AE_k16,AE simple,64.0,"k = 16, Adam lr=0.001, batch 64, 40 époques",602067.0,2.41,21.9,,,,,,0.6277,0.2011,0.0837,,,
+3,P3_DAE_k16,AE débruiteur,64.0,"k = 16, Adam lr=0.001, batch 64, 40 époques, bruit σ = 0,1",602067.0,2.41,22.0,,,,,,0.6254,0.1939,0.0795,,,
+4,P4_MSP,MSP,,seuil 0.01569,,,,,,,,,0.9519,,,0.7455,0.0536,1.0
+4,P4_AE sain (seuil partie 3),AE sain (seuil partie 3),,seuil 0.01405,,,,,,,,,0.3433,,,0.0182,0.1944,0.994
+4,P4_AE connus,AE connus,,seuil 0.0144,,,,,,,,,0.4245,,,0.0,0.0551,0.9937
+4,P4_Hybride OU,Hybride OU,,seuil 0.9748,,,,,,,,,0.914,,,0.6,0.0494,0.9988
+4,P4_Hybride score combiné,Hybride score combiné,,seuil 0.1805,,,,,,,,,0.9519,,,0.7455,0.0536,1.0
+5,P5_VAE : erreur de reconstruction,VAE k=16,64.0,"Adam lr=0.001, batch 64, 40 époques, β de 0 à 1 en 10 époques, saines seulement",733155.0,2.95,10.4,,,,,,0.6097,0.1581,0.0795,,,
+5,P5_VAE : -ELBO,VAE k=16,64.0,"Adam lr=0.001, batch 64, 40 époques, β de 0 à 1 en 10 époques, saines seulement",733155.0,2.95,10.4,,,,,,0.6276,0.1762,0.0795,,,
