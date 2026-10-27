@@ -183,14 +183,14 @@ def load_classifier(path, device=C.DEVICE):
 # Parties 3 et 5 : auto-encodeurs
 # ==========================================================================
 class Encoder(nn.Module):
-    """Conv stride 2 successives : 64 -> 32 -> 16 -> 8, canaux 3 -> 32 -> 64 -> 128."""
+    """Conv F=4, S=2, P=1 (comme build_ae de la partie 3) : 64 -> 32 -> 16 -> 8, canaux 3 -> 32 -> 64 -> 128."""
 
     def __init__(self):
         super().__init__()
         self.conv = nn.Sequential(
-            nn.Conv2d(3, 32, 3, 2, 1), nn.BatchNorm2d(32), nn.ReLU(inplace=True),     # 64 -> 32
-            nn.Conv2d(32, 64, 3, 2, 1), nn.BatchNorm2d(64), nn.ReLU(inplace=True),    # 32 -> 16
-            nn.Conv2d(64, 128, 3, 2, 1), nn.BatchNorm2d(128), nn.ReLU(inplace=True),  # 16 -> 8
+            nn.Conv2d(3, 32, 4, 2, 1), nn.BatchNorm2d(32), nn.ReLU(inplace=True),     # 64 -> 32
+            nn.Conv2d(32, 64, 4, 2, 1), nn.BatchNorm2d(64), nn.ReLU(inplace=True),    # 32 -> 16
+            nn.Conv2d(64, 128, 4, 2, 1), nn.BatchNorm2d(128), nn.ReLU(inplace=True),  # 16 -> 8
             nn.Flatten())
         self.out_dim = 128 * 8 * 8
 
